@@ -33,7 +33,7 @@ export default function GamePanel() {
   }
 
   return (
-    <HashbrownProvider url="http://localhost:3333/chat">
+    <HashbrownProvider url="/api/chat">
       <GameControlsSurface />
     </HashbrownProvider>
   );
