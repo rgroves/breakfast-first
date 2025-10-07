@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Breakfast First! An Absurdist Breakfast Adventure Game
 
-## Getting Started
+You're a simple person, who leads a simple life. You have a simple motto: “Coffee first, bacon second, everything else after.”
 
-First, run the development server:
+But today, the universe has other plans. Just as breakfast is within your grasp, the sky fills with alien drones who crave Earth’s resources—and apparently, your eggs. From kitchen to supermarket, from diner booths to syrup-soaked streets, you’ll fight, fumble, and maybe forge unlikely alliances—all while chasing the one thing that truly matters: a hot plate of breakfast.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Can you survive the invasion, outwit a bacon-hoarding rival, and finally sit down for a bite? Or will destiny (and your coffee) be forever stolen?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Welcome to Breakfast First: An Absurdist Breakfast Adventure!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Hackathon Details
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project was created for the CodeTV Web Dev Challenge (Season 2, Episode 9) community hackathon. Below is a concise overview of the core parameters and constraints that shaped the build.
 
-## Learn More
+See the official &amp; complete rules at [CodeTV Web Dev Challenge S2.E9 Hackathon page](https://codetv.dev/blog/web-dev-challenge-hackathon-s2e9-breakfast-apps).
 
-To learn more about Next.js, take a look at the following resources:
+### Core Theme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Build anything as long as it is clearly about breakfast: recipes, ranking burritos, shrine to pancakes, playful experiments — the theme just has to be unmistakably breakfast.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Required Tech
 
-## Deploy on Vercel
+- Incorporate **Hashbrown** as part of the app (generative UI + component schemas, safe function calling, structured output, runtime features).
+- Intent: leverage Hashbrown to let an LLM assemble constrained, high‑quality UI from your vetted component set.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Time Guidelines (Lightweight, Not Strict Police)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Plan: ~30 minutes.
+- Build: ~4 hours.
+- You _can_ go longer if you’re vibing; guidelines exist to keep scope small and accessible.
+
+### Team Format
+
+- Solo or pair.
+
+### Deliverables
+
+1. Public GitHub repository (source code visible).
+2. Deployed, publicly accessible URL.
+3. Uses Hashbrown meaningfully (not just an unused dependency).
+4. Submission via the official form before the posted deadline.
+
+### Community & Support
+
+- Dedicated `#builder-chat` channel in the [CodeTV Discord](https://codetv.link/discord) for idea sharing, feedback, and networking.
+- Strong encouragement to engage — part of the value is making connections.
+
+## Developer Notes
+
+### Time & Team
+
+- I did go longer than the 4 hours ⌚
+  - This was my first time building with NextJS and in doing that, I knew I'd probably not make the 4 hours, but wanted a project to use for NextJS learning so this was it.
+  - I'm still cooking in places. More on that below.
+- I built this solo, but am open to pairing up with someone design savvy, so if you're looking for a design project and want to put lipstick on this pig, reach out.
+
+### Hashbrown Usage
+
+This project uses the following features of [Hashbrown](https://hashbrown.dev):
+
+- OpenAI Adapter
+- Generative UI (via exposed components)
+- Tool Calling
+
+## Where things are at (as of 2025/10/06):
+
+### The Good
+
+- The main concept of a story being presented and the user (being the protagonist) getting to choose their own actions to affect the story is working.
+- Story is AI generated (but slightly guided; this still needs work).
+- Hashbrown is used to stream the resulting generated story narrative back to the UI in a Markdown viewer component.
+- Hashbrown is used to make tool calls to affect the UI
+  - The scene items that can be chosen from are populated/updated by tool calls, as well as getting "scene notes" (used to guide the story) and creating the scenes.
+
+### The Bad
+
+- The story line is only guided for the first scene, so things can go off the rails a bit quickly and there may not be an end to the game play at the moment.
+- The prepositions that show up in the Actions list need work to be context aware based on the initial actions chosen.
+- This is using an app specific OpenAI key that is funded with < $20 in credits at the time of writing; with no way for letting a user provide their own key.
+- The scene items that can be interacted with need better control for how they are removed from scene-to-scene/action-to-action.
+
+### The Ugly
+
+- Right now the layout and styling is a little horrid 😱.
+
+## Where I want things to go
+
+- Add intro and splash page
+- Have the full story arc guided from beginning to end, so user can play through a complete story
+- Add an inventory system
+- Add some kind of scoring (maybe based on collected items or actions taken)
+- Implement a better UX
