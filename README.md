@@ -74,6 +74,7 @@ This project uses the following features of [Hashbrown](https://hashbrown.dev):
 
 ### The Bad
 
+- Startup wait time is kind of ridiculous 30s-1m. Ouch!
 - The story line is only guided for the first scene, so things can go off the rails a bit quickly and there may not be an end to the game play at the moment.
 - The prepositions that show up in the Actions list need work to be context aware based on the initial actions chosen.
 - This is using an app specific OpenAI key that is funded with < $20 in credits at the time of writing; with no way for letting a user provide their own key.
