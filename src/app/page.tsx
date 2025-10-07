@@ -1,3 +1,4 @@
+import GamePanel from "./components/GamePanel";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -5,8 +6,9 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>
-          Welcome to <strong>Absurdist</strong> Breakfast Simulator
+          Breakfast First - An <strong>Absurdist</strong> Breakfast Adventure
         </h1>
+        <GamePanel />
       </main>
       <footer className={styles.footer}>
         <p>
