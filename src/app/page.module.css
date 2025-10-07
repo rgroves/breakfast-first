@@ -30,6 +30,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  max-width: 60ch;
   gap: 32px;
   grid-row-start: 2;
 }
