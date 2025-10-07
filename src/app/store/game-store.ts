@@ -69,7 +69,7 @@ export const useGameStore = create<GameState>((set) => ({
   isCommandValid: false,
 
   setIsCommandValid: (isValid: boolean) =>
-    set((state) => ({ isCommandValid: isValid })),
+    set(() => ({ isCommandValid: isValid })),
 
   clearCommand: () =>
     set({

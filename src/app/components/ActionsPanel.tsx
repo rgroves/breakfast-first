@@ -12,12 +12,13 @@ const validActions = [
   "drink",
 ];
 
-const vp = {
-  use: ["on", "with"],
-  go: ["to", "into"],
-  look: ["at", "in"],
-  take: ["from"],
-};
+// TODO: Make prepositions context-sensitive based on the active action
+// const vp = {
+//   use: ["on", "with"],
+//   go: ["to", "into"],
+//   look: ["at", "in"],
+//   take: ["from"],
+// };
 
 const validPrepositions = ["on", "with", "at", "to", "in", "from", "into"];
 

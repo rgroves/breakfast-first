@@ -130,7 +130,7 @@ function GameControlsSurface() {
   });
 
   const {
-    error,
+    // error,
     sendMessage,
     messages,
     isSending,
@@ -166,7 +166,7 @@ function GameControlsSurface() {
       startMessageSentRef.current = true;
       sendMessage({ role: "user", content: "/START" });
     }
-  }, []);
+  }, [sendMessage]);
 
   return (
     <>
@@ -205,7 +205,7 @@ function GameControlsSurface() {
       )}
       {gameStatus == "game_over" && (
         <div>
-          <p>You're quest for breakfast ends here.</p>
+          <p>You&apos;re quest for breakfast ends here.</p>
           <h3>Game Over</h3>
         </div>
       )}
@@ -213,6 +213,7 @@ function GameControlsSurface() {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function MessageDisplay({ message }: { message: UiChatMessage<any> }) {
   const content = (message.content as string) || "";
   return (

@@ -3,7 +3,6 @@ import { useGameStore } from "../store/game-store";
 export default function SceneItemPanel() {
   const sceneItems = useGameStore((state) => state.sceneItems);
   const activeSceneItem = useGameStore((state) => state.activeSceneItem);
-  const activeSceneItemName = activeSceneItem ? activeSceneItem.name : "";
 
   return (
     <div>

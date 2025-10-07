@@ -12,7 +12,8 @@ export default function Home() {
       </main>
       <footer className={styles.footer}>
         <p>
-          A submission for CodeTV's Web Dev Challenge S2.E9 Community Hackathon.
+          A submission for CodeTV&apos;s Web Dev Challenge S2.E9 Community
+          Hackathon.
         </p>
       </footer>
     </div>
