@@ -20,8 +20,8 @@ import systemPrompt from "@/data/system-prompt.md";
 import BreakfastLoadingOverlay from "./BreakfastLoadingOverlay";
 
 // const model = "gpt-5-nano";
-// const model = "gpt-5-mini";
-const model = "gpt-5";
+const model = "gpt-5-mini";
+// const model = "gpt-5";
 
 export default function GamePanel() {
   const [mounted, setMounted] = useState(false);

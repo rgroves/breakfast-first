@@ -1,4 +1,4 @@
-import GamePanel from "./components/GamePanel";
+import GamePanel from "../components/GamePanel";
 import styles from "./page.module.css";
 
 export default function Home() {
